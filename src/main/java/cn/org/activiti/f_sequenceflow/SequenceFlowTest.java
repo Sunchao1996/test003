@@ -1,4 +1,4 @@
-package cn.org.activiti.f_persontask;
+package cn.org.activiti.f_sequenceflow;
 
 import org.activiti.engine.ProcessEngine;
 import org.activiti.engine.ProcessEngines;
@@ -47,7 +47,7 @@ public class SequenceFlowTest {
      */
     @Test
     public void single(){
-        processEngine.getTaskService().setAssignee("1904","张三");
+        processEngine.getTaskService().setAssignee("2103","张三");
         System.out.println("委托任务成功");
     }
     /**查询当前人的个人任务*/
@@ -73,7 +73,7 @@ public class SequenceFlowTest {
     @Test
     public void completeMyPersonalTask(){
         //任务ID
-        String taskId = "1904";
+        String taskId = "2103";
         //完成任务的同时，设置流程变量，使用流程变量用来指定完成任务后，下一个连线，对应sequenceFlow.bpmn文件中${message=='不重要'}
         Map<String,Object> valueMap = new HashMap<>();
         valueMap.put("message","重要");
